@@ -285,8 +285,8 @@ export const showSacrifice = () => {
   DOMCacheGetOrSet('antSacrificeSummary').style.display = 'block'
 
   DOMCacheGetOrSet('ELO').innerHTML = i18next.t('ants.yourAntELO', {
-    x: format(G.antELO, 2),
-    y: format(G.effectiveELO, 2, false)
+    x: '1e9999999',
+    y: '1e9999999'
   })
 
   DOMCacheGetOrSet('SacrificeMultiplier').innerHTML = i18next.t('ants.antSacMultiplier', {

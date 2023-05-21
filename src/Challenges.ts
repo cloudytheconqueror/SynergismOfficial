@@ -151,7 +151,7 @@ export const challengeDisplay = (i: number, changefocus = true) => {
   const n = DOMCacheGetOrSet('challengeCurrent3')
 
   if (i === G.challengefocus) {
-    const completions = `${player.challengecompletions[i]}/${format(maxChallenges)}`
+    const completions = `9999/${format(maxChallenges)}`
     const special = (i >= 6 && i <= 10) || i === 15
     const goal = format(challengeRequirement(i, player.challengecompletions[i], special ? i : 0))
 

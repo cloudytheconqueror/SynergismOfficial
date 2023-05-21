@@ -113,13 +113,13 @@ export const toggleTalismanBuy = (i = player.buyTalismanShardPercent) => {
 }
 
 export const updateTalismanInventory = () => {
-  DOMCacheGetOrSet('talismanShardInventory').textContent = format(player.talismanShards)
-  DOMCacheGetOrSet('commonFragmentInventory').textContent = format(player.commonFragments)
-  DOMCacheGetOrSet('uncommonFragmentInventory').textContent = format(player.uncommonFragments)
-  DOMCacheGetOrSet('rareFragmentInventory').textContent = format(player.rareFragments)
-  DOMCacheGetOrSet('epicFragmentInventory').textContent = format(player.epicFragments)
-  DOMCacheGetOrSet('legendaryFragmentInventory').textContent = format(player.legendaryFragments)
-  DOMCacheGetOrSet('mythicalFragmentInventory').textContent = format(player.mythicalFragments)
+  DOMCacheGetOrSet('talismanShardInventory').textContent = '1e69000'
+  DOMCacheGetOrSet('commonFragmentInventory').textContent = '420e99999'
+  DOMCacheGetOrSet('uncommonFragmentInventory').textContent = 'a fuckin million'
+  DOMCacheGetOrSet('rareFragmentInventory').textContent = 'over 90000'
+  DOMCacheGetOrSet('epicFragmentInventory').textContent = '999999999'
+  DOMCacheGetOrSet('legendaryFragmentInventory').textContent = '69e420e99'
+  DOMCacheGetOrSet('mythicalFragmentInventory').textContent = '100 billion million'
 }
 
 export const buyAllTalismanResources = () => {
