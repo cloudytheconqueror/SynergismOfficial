@@ -11,9 +11,10 @@
     },
     "ambrosia": {
         "amount": "You have <<var(--lightgoldenrodyellow-text-color)|{{ambrosia}}>> Ambrosia!",
-        "chance": "<<var(--amber-text-color)|{{chance}}%>> chance next second for generation",
-        "perGen": "Currently gaining <<var(--amber-text-color)|{{guaranteed}}>> with a <<var(--amber-text-color)|{{extraChance}}%>> chance of another. [<<var(--lime-text-color)|Luck: &#9752 {{ambrosiaLuck}}>>]",
-        "blueberrySecond": "You currently have <<var(--amber-text-color)|{{blueberrySecond}}>> accumulated Blueberry Seconds! Blueberry Second generation chance <<var(--amber-text-color)|x{{RNG}}>> (Guaranteed at 10,000 Blueberry Seconds)"
+        "blueberryGeneration": "Each second, gain <<var(--amber-text-color)|{{chance}}>> seconds of Blueberry Time.",
+        "perGen": "Currently gaining <<var(--amber-text-color)|{{guaranteed}}>> with a <<var(--amber-text-color)|{{extraChance}}%>> chance of another. [<<var(--lime-text-color)|Luck: ☘ {{ambrosiaLuck}}>>]",
+        "blueberrySecond": "You currently have <<var(--amber-text-color)|{{blueberrySecond}}>> accumulated Blueberry Seconds! Blueberry Second generation chance <<var(--amber-text-color)|x{{RNG}}>> (Guaranteed at 10,000 Blueberry Seconds)",
+        "bonuses": "Temporarily, your saved ambrosia is giving <<var(--amber-text-color)|+{{cube}}%>> ALL cubes and <<cyan|+{{quark}}%>> Quarks!"
     },
     "achievements": {
         "descriptions": {
@@ -1287,7 +1288,15 @@
             "seasonPassInfinity": "Erhalte 2% mehr Würfel pro Level, multiplikativ! (Multiplikator: 1.02^Level)",
             "shopSingularityPenaltyDebuff": "Derpsmith war so stolz auf deine Leistung in der ersten EXALT, dass er deine Singularitätsdebuffs abschwächt. Für einen Preis. Einen großen Preis.",
             "obtainiumEX2": "Erhalte+1% Obtainium pro Level pro Singularität!!!",
-            "improveQuarkHept5": "Das hat nur 1/50 des Effekt eines normalen Verbesserers. Warum? Wegen der Spielbalance..."
+            "improveQuarkHept5": "Das hat nur 1/50 des Effekt eines normalen Verbesserers. Warum? Wegen der Spielbalance...",
+            "shopAmbrosiaGeneration1": "Buying this charm grants +1% faster Blueberry Time generation per level, for more Ambrosia! Don't know what that means? You soon will.",
+            "shopAmbrosiaGeneration2": "Newly fortified Obtainium Dust makes your charm more powerful, giving +1% faster Blueberry Time generation per level, stacking multiplicatively.",
+            "shopAmbrosiaGeneration3": "It turns out adding more Obtainium Dust makes your charm more powerful, go figure. +1% faster Blueberry Time generation per level, stacking multiplicatively.",
+            "shopAmbrosiaGeneration4": "What if you also added Quark Dust??? You will find out. +0.1% faster Blueberry Time generation per level, stacking multiplicatively.",
+            "shopAmbrosiaLuck1": "Buying this charm grants +1 &#9752 Ambrosia luck per level, for more Ambrosia! Don't know what that means? You soon will.",
+            "shopAmbrosiaLuck2": "You get a slightly larger four leaf clover, giving +1 &#9752 Ambrosia luck per level, stacking additively.",
+            "shopAmbrosiaLuck3": "You get a slightly greener four leaf clover, giving +1 &#9752 Ambrosia luck per level, stacking additively.",
+            "shopAmbrosiaLuck4": "You get a slightly 'better' four leaf clover, what ever that means, giving +0.3 &#9752 Ambrosia luck per level, stacking additively."
         },
         "maxed": "Maximiert!",
         "upgradeFor": "Verbessern für {{x}} Quarks",
@@ -1368,7 +1377,15 @@
             "obtainiumEX3": "Du erhältst <<pink|{{amount}}%>> mehr Obtainium!",
             "chronometerInfinity": "Der Aufstiegs-Timer erhöht sich <<orange|{{amount}}%>> schneller.",
             "seasonPassInfinity": "Aufstiege geben <<lightgoldenrodyellow|{{amount}}%>> mehr Würfel (von <<orchid|all>> Typen) beim Aufstieg.",
-            "shopSingularityPenaltyDebuff": "Bei Singularität <<pink|{{amount1}}>> sind deine Schwächungen so, als wärst du in Singularität <<pink|{{amount2}}>>."
+            "shopSingularityPenaltyDebuff": "Bei Singularität <<pink|{{amount1}}>> sind deine Schwächungen so, als wärst du in Singularität <<pink|{{amount2}}>>.",
+            "shopAmbrosiaGeneration1": "Blueberry Time is generated <<blue|{{amount}}%>> faster.",
+            "shopAmbrosiaGeneration2": "Blueberry Time is generated <<blue|{{amount}}%>> faster.",
+            "shopAmbrosiaGeneration3": "Blueberry Time is generated <<blue|{{amount}}%>> faster.",
+            "shopAmbrosiaGeneration4": "Blueberry Time is generated <<blue|{{amount}}%>> faster.",
+            "shopAmbrosiaLuck1": "Ambrosia Luck <<lime|&#9752 +{{amount}}>>",
+            "shopAmbrosiaLuck2": "Ambrosia Luck <<lime|&#9752 +{{amount}}>>",
+            "shopAmbrosiaLuck3": "Ambrosia Luck <<lime|&#9752 +{{amount}}>>",
+            "shopAmbrosiaLuck4": "Ambrosia Luck <<lime|&#9752 +{{amount}}>>"
         }
     },
     "singularity": {
@@ -1459,13 +1476,14 @@
                 "hasLevel1": "Ameisengeschwindigkeit wird mit einer MILLION multipliziert, das ist immun gegen alle Korruption.",
                 "default": "Ameisengeschwindigkeit wird mit 1000 multipliziert, das ist immun gegen alle Korruption."
             },
-            "irishAnt": "Ants blessed with the luck of the Irish grant &#9752 {{i}} Ambrosia Luck!",
-            "irishAnt2": "Ants blessed with more fortunate luck of the Irish grant &#9752 {{i}} more Ambrosia Luck!",
+            "irishAnt": "Ants blessed with the luck of the Irish grant ☘ {{i}} Ambrosia Luck!",
+            "irishAnt2": "Ants blessed with more fortunate luck of the Irish grant ☘ {{i}} more Ambrosia Luck!",
             "overclocked": "Levellimits für bestimmte Singularitätsupgrades werden um {{i}} erhöht!",
             "wowCubeAutomatedShipping": {
                 "hasLevel1": "Kaufe beim Aufstieg automatisch Würfel-Upgrades, egal wo du bist!",
                 "default": "Kaufe beim Aufstieg automatisch Würfel-Upgrades, aber nur in Singularitäts-Herausforderungen."
             },
+            "congealedblueberries": "Semisolid Blueberries act like normal Blueberries. Gain +{{i}} Blueberries which may be used in the Blueberry tree!",
             "goldenRevolution": "Singularität gibt 0.4% mehr goldene Quarks je Singularity. Aktuell: +{{current}}% (MAX: +100%)",
             "goldenRevolutionII": "Goldene Quarks sind 0.2% günstiger je Singularity. Aktuell: -{{current}}% (MAX: -50%)",
             "goldenRevolutionIII": "Export gibt 2% mehr goldene Quarks je Singularity. Aktuell: +{{current}}% (MAX: +500%)",
@@ -1871,6 +1889,7 @@
             "irishAnt2": "Irish Ants II: Electric Boogaloo",
             "overclocked": "Overclocked",
             "wowCubeAutomatedShipping": "Wow! Cube Automated Shipping",
+            "congealedblueberries": "Congealed Blueberries",
             "goldenRevolution": "Golden Revolution",
             "goldenRevolutionII": "Golden Revolution II",
             "goldenRevolutionIII": "Golden Revolution III",
@@ -2232,8 +2251,7 @@
             "hepteract": "Hepteract Forge"
         },
         "singularity": {
-            "penalties": "Penalties",
-            "perks": "Perks",
+            "perks-penalties": "Perks / Penalties",
             "octeracts": "Octeracts",
             "exalt": "EXALT",
             "ambrosia": "Ambrosia"
@@ -3106,7 +3124,8 @@
                 "wait": "If you imported a save, you cannot use this code for 15 minutes to prevent cheaters.\n\nRegardless, you must wait at least 15 minutes between each use.",
                 "confirm": "Click the button within the next 15 seconds to test your luck! If you click within {{x}} ms of a randomly generated time, you will win a prize! This particular instance has a {{y}}x multiplier due to elapsed time between uses.",
                 "won": "You clicked at the right time! [+{{x}} Quarkies]",
-                "lost": "You didn't guess the right time, try again soon!"
+                "lost": "You didn't guess the right time, try again soon!",
+                "ambrosia": "Your blueberries resonate slightly, giving {{blueberryTime}} real life seconds of Blueberry Time."
             },
             "spoiler": {
                 "moreThan1": "You will gain {{x}} Octeracts (when they come out) every second, assuming you have them unlocked!",
